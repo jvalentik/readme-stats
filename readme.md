@@ -22,7 +22,7 @@ Copy-paste this into your markdown content, and that is it. Simple!
 Change the `?username=` value to your GitHub username.
 
 ```md
-[![Johny's GitHub stats](https://github-readme-stats.vercel.app/api?username=jvalentik)](https://github.com/jvalentik/readme-stats)
+[![Johny's GitHub stats](https://readme-stats.vercel.app/api?username=jvalentik)](https://github.com/jvalentik/readme-stats)
 ```
 
 > **Note**
@@ -35,7 +35,7 @@ You can pass a query parameter `&hide=` to hide any specific stats with comma-se
 > Options: `&hide=stars,commits,prs,issues,contribs`
 
 ```md
-![Johny's GitHub stats](https://github-readme-stats.vercel.app/api?username=jvalentik&hide=contribs,prs)
+![Johny's GitHub stats](https://readme-stats.vercel.app/api?username=jvalentik&hide=contribs,prs)
 ```
 
 ### Adding private contributions count to total commits count
@@ -48,7 +48,7 @@ You can add the count of all your private contributions to the total commits cou
 > Options: `&count_private=true`
 
 ```md
-![Johny's GitHub stats](https://github-readme-stats.vercel.app/api?username=jvalentik&count_private=true)
+![Johny's GitHub stats](https://readme-stats.vercel.app/api?username=jvalentik&count_private=true)
 ```
 
 ### Showing icons
@@ -56,7 +56,7 @@ You can add the count of all your private contributions to the total commits cou
 To enable icons, you can pass `show_icons=true` in the query param, like so:
 
 ```md
-![Johny's GitHub stats](https://github-readme-stats.vercel.app/api?username=jvalentik&show_icons=true)
+![Johny's GitHub stats](https://readme-stats.vercel.app/api?username=jvalentik&show_icons=true)
 ```
 
 ### Themes
@@ -66,7 +66,7 @@ With inbuilt themes, you can customize the look of the card without doing any [m
 Use `&theme=THEME_NAME` parameter like so :
 
 ```md
-![Johny's GitHub stats](https://github-readme-stats.vercel.app/api?username=jvalentik&show_icons=true&theme=radical)
+![Johny's GitHub stats](https://readme-stats.vercel.app/api?username=jvalentik&show_icons=true&theme=radical)
 ```
 
 #### All inbuilt themes
@@ -79,8 +79,8 @@ You can look at a preview for [all available themes](./themes/README.md) or chec
 
 #### Responsive Card Theme
 
-[![Johny's GitHub stats-Dark](https://github-readme-stats.vercel.app/api?username=jvalentik&show_icons=true&theme=dark#gh-dark-mode-only)](https://github.com/jvalentik/readme-stats#gh-dark-mode-only)
-[![Johny's GitHub stats-Light](https://github-readme-stats.vercel.app/api?username=jvalentik&show_icons=true&theme=default#gh-light-mode-only)](https://github.com/jvalentik/readme-stats#gh-light-mode-only)
+[![Johny's GitHub stats-Dark](https://readme-stats.vercel.app/api?username=jvalentik&show_icons=true&theme=dark#gh-dark-mode-only)](https://github.com/jvalentik/readme-stats#gh-dark-mode-only)
+[![Johny's GitHub stats-Light](https://readme-stats.vercel.app/api?username=jvalentik&show_icons=true&theme=default#gh-light-mode-only)](https://github.com/jvalentik/readme-stats#gh-light-mode-only)
 
 Since GitHub will re-upload the cards and serve them from their [CDN](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-anonymized-urls), we can not infer the browser/GitHub theme on the server side. There are, however, four methods you can use to create dynamics themes on the client side.
 
@@ -89,13 +89,13 @@ Since GitHub will re-upload the cards and serve them from their [CDN](https://do
 We have included a `transparent` theme that has a transparent background. This theme is optimized to look good on GitHub's dark and light default themes. You can enable this theme using the `&theme=transparent` parameter like so:
 
 ```md
-![Johny's GitHub stats](https://github-readme-stats.vercel.app/api?username=jvalentik&show_icons=true&theme=transparent)
+![Johny's GitHub stats](https://readme-stats.vercel.app/api?username=jvalentik&show_icons=true&theme=transparent)
 ```
 
 <details>
 <summary>:eyes: Show example</summary>
 
-![Johny's GitHub stats](https://github-readme-stats.vercel.app/api?username=jvalentik&show_icons=true&theme=transparent)
+![Johny's GitHub stats](https://readme-stats.vercel.app/api?username=jvalentik&show_icons=true&theme=transparent)
 
 </details>
 
@@ -104,13 +104,13 @@ We have included a `transparent` theme that has a transparent background. This t
 You can use the `bg_color` parameter to make any of [the available themes](./themes/README.md) transparent. This is done by setting the `bg_color` to a colour with a transparent alpha channel (i.e. `bg_color=00000000`):
 
 ```md
-![Johny's GitHub stats](https://github-readme-stats.vercel.app/api?username=jvalentik&show_icons=true&bg_color=00000000)
+![Johny's GitHub stats](https://readme-stats.vercel.app/api?username=jvalentik&show_icons=true&bg_color=00000000)
 ```
 
 <details>
 <summary>:eyes: Show example</summary>
 
-![Johny's GitHub stats](https://github-readme-stats.vercel.app/api?username=jvalentik&show_icons=true&bg_color=00000000)
+![Johny's GitHub stats](https://readme-stats.vercel.app/api?username=jvalentik&show_icons=true&bg_color=00000000)
 
 </details>
 
@@ -119,15 +119,15 @@ You can use the `bg_color` parameter to make any of [the available themes](./the
 You can use [GitHub's theme context](https://github.blog/changelog/2021-11-24-specify-theme-context-for-images-in-markdown/) tags to switch the theme based on the user GitHub theme automatically. This is done by appending `#gh-dark-mode-only` or `#gh-light-mode-only` to the end of an image URL. This tag will define whether the image specified in the markdown is only shown to viewers using a light or a dark GitHub theme:
 
 ```md
-[![Johny's GitHub stats-Dark](https://github-readme-stats.vercel.app/api?username=jvalentik&show_icons=true&theme=dark#gh-dark-mode-only)](https://github.com/jvalentik/readme-stats#gh-dark-mode-only)
-[![Johny's GitHub stats-Light](https://github-readme-stats.vercel.app/api?username=jvalentik&show_icons=true&theme=default#gh-light-mode-only)](https://github.com/jvalentik/readme-stats#gh-light-mode-only)
+[![Johny's GitHub stats-Dark](https://readme-stats.vercel.app/api?username=jvalentik&show_icons=true&theme=dark#gh-dark-mode-only)](https://github.com/jvalentik/readme-stats#gh-dark-mode-only)
+[![Johny's GitHub stats-Light](https://readme-stats.vercel.app/api?username=jvalentik&show_icons=true&theme=default#gh-light-mode-only)](https://github.com/jvalentik/readme-stats#gh-light-mode-only)
 ```
 
 <details>
 <summary>:eyes: Show example</summary>
 
-[![Johny's GitHub stats-Dark](https://github-readme-stats.vercel.app/api?username=jvalentik&show_icons=true&theme=dark#gh-dark-mode-only)](https://github.com/jvalentik/readme-stats#gh-dark-mode-only)
-[![Johny's GitHub stats-Light](https://github-readme-stats.vercel.app/api?username=jvalentik&show_icons=true&theme=default#gh-light-mode-only)](https://github.com/jvalentik/readme-stats#gh-light-mode-only)
+[![Johny's GitHub stats-Dark](https://readme-stats.vercel.app/api?username=jvalentik&show_icons=true&theme=dark#gh-dark-mode-only)](https://github.com/jvalentik/readme-stats#gh-dark-mode-only)
+[![Johny's GitHub stats-Light](https://readme-stats.vercel.app/api?username=jvalentik&show_icons=true&theme=default#gh-light-mode-only)](https://github.com/jvalentik/readme-stats#gh-light-mode-only)
 
 </details>
 
@@ -138,14 +138,14 @@ You can use [GitHub's new media feature](https://github.blog/changelog/2022-05-1
 ```html
 <picture>
 <source
-  srcset="https://github-readme-stats.vercel.app/api?username=jvalentik&show_icons=true&theme=dark"
+  srcset="https://readme-stats.vercel.app/api?username=jvalentik&show_icons=true&theme=dark"
   media="(prefers-color-scheme: dark)"
 />
 <source
-  srcset="https://github-readme-stats.vercel.app/api?username=jvalentik&show_icons=true"
+  srcset="https://readme-stats.vercel.app/api?username=jvalentik&show_icons=true"
   media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
 />
-<img src="https://github-readme-stats.vercel.app/api?username=jvalentik&show_icons=true" />
+<img src="https://readme-stats.vercel.app/api?username=jvalentik&show_icons=true" />
 </picture>
 ```
 
@@ -154,14 +154,14 @@ You can use [GitHub's new media feature](https://github.blog/changelog/2022-05-1
 
 <picture>
 <source
-  srcset="https://github-readme-stats.vercel.app/api?username=jvalentik&show_icons=true&theme=dark"
+  srcset="https://readme-stats.vercel.app/api?username=jvalentik&show_icons=true&theme=dark"
   media="(prefers-color-scheme: dark)"
 />
 <source
-  srcset="https://github-readme-stats.vercel.app/api?username=jvalentik&show_icons=true"
+  srcset="https://readme-stats.vercel.app/api?username=jvalentik&show_icons=true"
   media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
 />
-<img src="https://github-readme-stats.vercel.app/api?username=jvalentik&show_icons=true" />
+<img src="https://readme-stats.vercel.app/api?username=jvalentik&show_icons=true" />
 </picture>
 
 </details>
@@ -255,26 +255,26 @@ Yay! You are no longer limited to 6 pinned repositories.
 
 Copy-paste this code into your readme and change the links.
 
-Endpoint: `api/pin?username=jvalentik&repo=github-readme-stats`
+Endpoint: `api/pin?username=jvalentik&repo=readme-stats`
 
 ```md
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=jvalentik&repo=github-readme-stats)](https://github.com/jvalentik/readme-stats)
+[![Readme Card](https://readme-stats.vercel.app/api/pin/?username=jvalentik&repo=readme-stats)](https://github.com/jvalentik/readme-stats)
 ```
 
 ### Demo
 
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=jvalentik&repo=github-readme-stats)](https://github.com/jvalentik/readme-stats)
+[![Readme Card](https://readme-stats.vercel.app/api/pin/?username=jvalentik&repo=readme-stats)](https://github.com/jvalentik/readme-stats)
 
 Use [show_owner](#customization) variable to include the repo's owner username
 
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=jvalentik&repo=github-readme-stats&show_owner=true)](https://github.com/jvalentik/readme-stats)
+[![Readme Card](https://readme-stats.vercel.app/api/pin/?username=jvalentik&repo=readme-stats&show_owner=true)](https://github.com/jvalentik/readme-stats)
 
 # Top Languages Card
 
 The top languages card shows a GitHub user's most frequently used top language.
 
 > **Note**
-> Top Languages does not indicate my skill level or anything like that; it's a GitHub metric to determine which languages have the most code on GitHub. It is a new feature of github-readme-stats.
+> Top Languages does not indicate my skill level or anything like that; it's a GitHub metric to determine which languages have the most code on GitHub. It is a new feature of readme-stats.
 
 ### Usage
 
@@ -283,7 +283,7 @@ Copy-paste this code into your readme and change the links.
 Endpoint: `api/top-langs?username=jvalentik`
 
 ```md
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=jvalentik)](https://github.com/jvalentik/readme-stats)
+[![Top Langs](https://readme-stats.vercel.app/api/top-langs/?username=jvalentik)](https://github.com/jvalentik/readme-stats)
 ```
 
 ### Exclude individual repositories
@@ -291,7 +291,7 @@ Endpoint: `api/top-langs?username=jvalentik`
 You can use the `&exclude_repo=repo1,repo2` parameter to exclude individual repositories.
 
 ```md
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=jvalentik&exclude_repo=github-readme-stats,jvalentik.github.io)](https://github.com/jvalentik/readme-stats)
+[![Top Langs](https://readme-stats.vercel.app/api/top-langs/?username=jvalentik&exclude_repo=readme-stats,jvalentik.github.io)](https://github.com/jvalentik/readme-stats)
 ```
 
 ### Hide individual languages
@@ -299,7 +299,7 @@ You can use the `&exclude_repo=repo1,repo2` parameter to exclude individual repo
 You can use `&hide=language1,language2` parameter to hide individual languages.
 
 ```md
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=jvalentik&hide=javascript,html)](https://github.com/jvalentik/readme-stats)
+[![Top Langs](https://readme-stats.vercel.app/api/top-langs/?username=jvalentik&hide=javascript,html)](https://github.com/jvalentik/readme-stats)
 ```
 
 ### Show more languages
@@ -307,7 +307,7 @@ You can use `&hide=language1,language2` parameter to hide individual languages.
 You can use the `&langs_count=` option to increase or decrease the number of languages shown on the card. Valid values are integers between 1 and 10 (inclusive), and the default is 5.
 
 ```md
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=jvalentik&langs_count=8)](https://github.com/jvalentik/readme-stats)
+[![Top Langs](https://readme-stats.vercel.app/api/top-langs/?username=jvalentik&langs_count=8)](https://github.com/jvalentik/readme-stats)
 ```
 
 ### Compact Language Card Layout
@@ -315,23 +315,23 @@ You can use the `&langs_count=` option to increase or decrease the number of lan
 You can use the `&layout=compact` option to change the card design.
 
 ```md
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=jvalentik&layout=compact)](https://github.com/jvalentik/readme-stats)
+[![Top Langs](https://readme-stats.vercel.app/api/top-langs/?username=jvalentik&layout=compact)](https://github.com/jvalentik/readme-stats)
 ```
 
 ### Demo
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=jvalentik)](https://github.com/jvalentik/readme-stats)
+[![Top Langs](https://readme-stats.vercel.app/api/top-langs/?username=jvalentik)](https://github.com/jvalentik/readme-stats)
 
 -   Compact layout
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=jvalentik&layout=compact)](https://github.com/jvalentik/readme-stats)
+[![Top Langs](https://readme-stats.vercel.app/api/top-langs/?username=jvalentik&layout=compact)](https://github.com/jvalentik/readme-stats)
 
 # Wakatime Week Stats
 
 Change the `?username=` value to your [Wakatime](https://wakatime.com) username.
 
 ```md
-[![willianrod's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=willianrod)](https://github.com/jvalentik/readme-stats)
+[![willianrod's wakatime stats](https://readme-stats.vercel.app/api/wakatime?username=willianrod)](https://github.com/jvalentik/readme-stats)
 ```
 
 > **Note**:
@@ -339,13 +339,13 @@ Change the `?username=` value to your [Wakatime](https://wakatime.com) username.
 
 ### Demo
 
-[![willianrod's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=willianrod)](https://github.com/jvalentik/readme-stats)
+[![willianrod's wakatime stats](https://readme-stats.vercel.app/api/wakatime?username=willianrod)](https://github.com/jvalentik/readme-stats)
 
-[![willianrod's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=willianrod&hide_progress=true)](https://github.com/jvalentik/readme-stats)
+[![willianrod's wakatime stats](https://readme-stats.vercel.app/api/wakatime?username=willianrod&hide_progress=true)](https://github.com/jvalentik/readme-stats)
 
 -   Compact layout
 
-[![willianrod's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=willianrod&layout=compact)](https://github.com/jvalentik/readme-stats)
+[![willianrod's wakatime stats](https://readme-stats.vercel.app/api/wakatime?username=willianrod&layout=compact)](https://github.com/jvalentik/readme-stats)
 
 * * *
 
@@ -353,53 +353,53 @@ Change the `?username=` value to your [Wakatime](https://wakatime.com) username.
 
 -   Default
 
-![Johny's GitHub stats](https://github-readme-stats.vercel.app/api?username=jvalentik)
+![Johny's GitHub stats](https://readme-stats.vercel.app/api?username=jvalentik)
 
 -   Hiding specific stats
 
-![Johny's GitHub stats](https://github-readme-stats.vercel.app/api?username=jvalentik&hide=contribs,issues)
+![Johny's GitHub stats](https://readme-stats.vercel.app/api?username=jvalentik&hide=contribs,issues)
 
 -   Showing icons
 
-![Johny's GitHub stats](https://github-readme-stats.vercel.app/api?username=jvalentik&hide=issues&show_icons=true)
+![Johny's GitHub stats](https://readme-stats.vercel.app/api?username=jvalentik&hide=issues&show_icons=true)
 
 -   Customize Border Color
 
-![Johny's GitHub stats](https://github-readme-stats.vercel.app/api?username=jvalentik&border_color=2e4058)
+![Johny's GitHub stats](https://readme-stats.vercel.app/api?username=jvalentik&border_color=2e4058)
 
 -   Include All Commits
 
-![Johny's GitHub stats](https://github-readme-stats.vercel.app/api?username=jvalentik&include_all_commits=true)
+![Johny's GitHub stats](https://readme-stats.vercel.app/api?username=jvalentik&include_all_commits=true)
 
 -   Themes
 
 Choose from any of the [default themes](#themes)
 
-![Johny's GitHub stats](https://github-readme-stats.vercel.app/api?username=jvalentik&show_icons=true&theme=radical)
+![Johny's GitHub stats](https://readme-stats.vercel.app/api?username=jvalentik&show_icons=true&theme=radical)
 
 -   Gradient
 
-![Johny's GitHub stats](https://github-readme-stats.vercel.app/api?username=jvalentik&bg_color=30,e96443,904e95&title_color=fff&text_color=fff)
+![Johny's GitHub stats](https://readme-stats.vercel.app/api?username=jvalentik&bg_color=30,e96443,904e95&title_color=fff&text_color=fff)
 
 -   Customizing stats card
 
-![Johny's GitHub stats](https://github-readme-stats.vercel.app/api/?username=jvalentik&show_icons=true&title_color=fff&icon_color=79ff97&text_color=9f9f9f&bg_color=151515)
+![Johny's GitHub stats](https://readme-stats.vercel.app/api/?username=jvalentik&show_icons=true&title_color=fff&icon_color=79ff97&text_color=9f9f9f&bg_color=151515)
 
 -   Setting card locale
 
-![Johny's GitHub stats](https://github-readme-stats.vercel.app/api/?username=jvalentik&locale=es)
+![Johny's GitHub stats](https://readme-stats.vercel.app/api/?username=jvalentik&locale=es)
 
 -   Customizing repo card
 
-![Customized Card](https://github-readme-stats.vercel.app/api/pin?username=jvalentik&repo=github-readme-stats&title_color=fff&icon_color=f9f9f9&text_color=9f9f9f&bg_color=151515)
+![Customized Card](https://readme-stats.vercel.app/api/pin?username=jvalentik&repo=readme-stats&title_color=fff&icon_color=f9f9f9&text_color=9f9f9f&bg_color=151515)
 
 -   Top languages
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=jvalentik)](https://github.com/jvalentik/readme-stats)
+[![Top Langs](https://readme-stats.vercel.app/api/top-langs/?username=jvalentik)](https://github.com/jvalentik/readme-stats)
 
 -   WakaTime card
 
-[![willianrod's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=willianrod)](https://github.com/jvalentik/readme-stats)
+[![willianrod's wakatime stats](https://readme-stats.vercel.app/api/wakatime?username=willianrod)](https://github.com/jvalentik/readme-stats)
 
 * * *
 
@@ -409,10 +409,10 @@ By default, GitHub does not lay out the cards side by side. To do that, you can 
 
 ```html
 <a href="https://github.com/jvalentik/readme-stats">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=jvalentik&repo=github-readme-stats" />
+  <img align="center" src="https://readme-stats.vercel.app/api/pin/?username=jvalentik&repo=readme-stats" />
 </a>
 <a href="https://github.com/jvalentik/convoychat">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=jvalentik&repo=convoychat" />
+  <img align="center" src="https://readme-stats.vercel.app/api/pin/?username=jvalentik&repo=convoychat" />
 </a>
 ```
 
@@ -423,7 +423,7 @@ By default, GitHub does not lay out the cards side by side. To do that, you can 
 > **Warning**
 > If you are on the [hobby (i.e. free)](https://vercel.com/pricing) Vercel plan, please make sure you change the `maxDuration` parameter in the [vercel.json](https://github.com/jvalentik/readme-stats/blob/master/vercel.json) file from `30` to `10` (see [#1416](https://github.com/jvalentik/readme-stats/issues/1416#issuecomment-950275476) for more information).
 
-Since the GitHub API only allows 5k requests per hour, my `https://github-readme-stats.vercel.app/api` could possibly hit the rate limiter. If you host it on your own Vercel server, then you do not have to worry about anything. Click on the deploy button to get started!
+Since the GitHub API only allows 5k requests per hour, my `https://readme-stats.vercel.app/api` could possibly hit the rate limiter. If you host it on your own Vercel server, then you do not have to worry about anything. Click on the deploy button to get started!
 
 > **Note**
 > Since [#58](https://github.com/jvalentik/readme-stats/pull/58), we should be able to handle more than 5k requests and have fewer issues with downtime :grin:.
@@ -464,7 +464,7 @@ this takes time. You can use this service for free.
 
 However, if you are using this project and are happy with it or just want to encourage me to continue creating stuff, there are a few ways you can do it:
 
--   Giving proper credit when you use github-readme-stats on your readme, linking back to it :D
+-   Giving proper credit when you use readme-stats on your readme, linking back to it :D
 -   Starring and sharing the project :rocket:
 -   [![paypal.me/jvalentik](https://ionicabizau.github.io/badges/paypal.svg)](https://www.paypal.me/jvalentik) - You can make one-time donations via PayPal. I'll probably buy a ~~coffee~~ tea. :tea:
 
