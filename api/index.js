@@ -9,7 +9,9 @@ import {
 } from "../src/common/utils.js";
 import { fetchStats } from "../src/fetchers/stats-fetcher.js";
 import { isLocaleAvailable } from "../src/translations.js";
+import { inject } from "@vercel/analytics";
 
+inject();
 export default async (req, res) => {
   const {
     username,
@@ -79,6 +81,7 @@ export default async (req, res) => {
         include_all_commits: parseBoolean(include_all_commits),
         line_height,
         title_color,
+        // @ts-ignore
         ring_color,
         icon_color,
         text_color,

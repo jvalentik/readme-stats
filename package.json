@@ -49,6 +49,7 @@
     "prettier": "^2.1.2"
   },
   "dependencies": {
+    "@vercel/analytics": "^0.1.8",
     "axios": "^0.24.0",
     "dotenv": "^8.2.0",
     "emoji-name-map": "^1.2.8",
