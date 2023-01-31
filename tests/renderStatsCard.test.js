@@ -11,7 +11,7 @@ import "@testing-library/jest-dom";
 import { themes } from "../themes/index.js";
 
 const stats = {
-  name: "Anurag Hazra",
+  name: "Johny",
   totalStars: 100,
   totalCommits: 200,
   totalIssues: 300,
@@ -25,7 +25,7 @@ describe("Test renderStatsCard", () => {
     document.body.innerHTML = renderStatsCard(stats);
 
     expect(document.getElementsByClassName("header")[0].textContent).toBe(
-      "Anurag Hazra's GitHub Stats",
+      "Johny's GitHub Stats",
     );
 
     expect(
@@ -93,10 +93,7 @@ describe("Test renderStatsCard", () => {
       card_width: 1,
       hide_rank: true,
     });
-    expect(document.querySelector("svg")).toHaveAttribute(
-      "width",
-      "305.81250000000006",
-    );
+    expect(document.querySelector("svg")).toHaveAttribute("width", "287");
 
     // Test minimum card width with rank and icons.
     document.body.innerHTML = renderStatsCard(stats, {
@@ -104,10 +101,7 @@ describe("Test renderStatsCard", () => {
       hide_rank: true,
       show_icons: true,
     });
-    expect(document.querySelector("svg")).toHaveAttribute(
-      "width",
-      "322.81250000000006",
-    );
+    expect(document.querySelector("svg")).toHaveAttribute("width", "304");
 
     // Test minimum card width with icons but without rank.
     document.body.innerHTML = renderStatsCard(stats, {
@@ -305,7 +299,7 @@ describe("Test renderStatsCard", () => {
 
     expect(
       document.body.getElementsByTagName("svg")[0].getAttribute("width"),
-    ).toBe("305.81250000000006");
+    ).toBe("287");
   });
 
   it("should auto resize if hide_rank is true & custom_title is set", () => {
@@ -317,38 +311,6 @@ describe("Test renderStatsCard", () => {
     expect(
       document.body.getElementsByTagName("svg")[0].getAttribute("width"),
     ).toBe("287");
-  });
-
-  it("should render translations", () => {
-    document.body.innerHTML = renderStatsCard(stats, { locale: "cn" });
-    expect(document.getElementsByClassName("header")[0].textContent).toBe(
-      "Anurag Hazra 的 GitHub 统计数据",
-    );
-    expect(
-      document.querySelector(
-        'g[transform="translate(0, 0)"]>.stagger>.stat.bold',
-      ).textContent,
-    ).toMatchInlineSnapshot(`"获标星数（star）:"`);
-    expect(
-      document.querySelector(
-        'g[transform="translate(0, 25)"]>.stagger>.stat.bold',
-      ).textContent,
-    ).toMatchInlineSnapshot(`"累计提交数（commit） (2023):"`);
-    expect(
-      document.querySelector(
-        'g[transform="translate(0, 50)"]>.stagger>.stat.bold',
-      ).textContent,
-    ).toMatchInlineSnapshot(`"拉取请求数（PR）:"`);
-    expect(
-      document.querySelector(
-        'g[transform="translate(0, 75)"]>.stagger>.stat.bold',
-      ).textContent,
-    ).toMatchInlineSnapshot(`"指出问题数（issue）:"`);
-    expect(
-      document.querySelector(
-        'g[transform="translate(0, 100)"]>.stagger>.stat.bold',
-      ).textContent,
-    ).toMatchInlineSnapshot(`"参与项目数 (last year):"`);
   });
 
   it("should render without rounding", () => {

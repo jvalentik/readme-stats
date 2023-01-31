@@ -8,7 +8,7 @@ import { fetchStats } from "../src/fetchers/stats-fetcher.js";
 const data_stats = {
   data: {
     user: {
-      name: "Anurag Hazra",
+      name: "Johny",
       repositoriesContributedTo: { totalCount: 61 },
       contributionsCollection: {
         totalCommitContributions: 100,
@@ -99,7 +99,7 @@ afterEach(() => {
 
 describe("Test fetchStats", () => {
   it("should fetch correct stats", async () => {
-    let stats = await fetchStats("anuraghazra");
+    let stats = await fetchStats("jvalentik");
     const rank = calculateRank({
       totalCommits: 100,
       totalRepos: 5,
@@ -112,7 +112,7 @@ describe("Test fetchStats", () => {
 
     expect(stats).toStrictEqual({
       contributedTo: 61,
-      name: "Anurag Hazra",
+      name: "Johny",
       totalCommits: 100,
       totalIssues: 200,
       totalPRs: 300,
@@ -129,7 +129,7 @@ describe("Test fetchStats", () => {
       .onPost("https://api.github.com/graphql")
       .replyOnce(200, data_repo_zero_stars);
 
-    let stats = await fetchStats("anuraghazra");
+    let stats = await fetchStats("jvalentik");
     const rank = calculateRank({
       totalCommits: 100,
       totalRepos: 5,
@@ -142,7 +142,7 @@ describe("Test fetchStats", () => {
 
     expect(stats).toStrictEqual({
       contributedTo: 61,
-      name: "Anurag Hazra",
+      name: "Johny",
       totalCommits: 100,
       totalIssues: 200,
       totalPRs: 300,
@@ -155,13 +155,13 @@ describe("Test fetchStats", () => {
     mock.reset();
     mock.onPost("https://api.github.com/graphql").reply(200, error);
 
-    await expect(fetchStats("anuraghazra")).rejects.toThrow(
+    await expect(fetchStats("jvalentik")).rejects.toThrow(
       "Could not resolve to a User with the login of 'noname'.",
     );
   });
 
   it("should fetch and add private contributions", async () => {
-    let stats = await fetchStats("anuraghazra", true);
+    let stats = await fetchStats("jvalentik", true);
     const rank = calculateRank({
       totalCommits: 150,
       totalRepos: 5,
@@ -174,7 +174,7 @@ describe("Test fetchStats", () => {
 
     expect(stats).toStrictEqual({
       contributedTo: 61,
-      name: "Anurag Hazra",
+      name: "Johny",
       totalCommits: 150,
       totalIssues: 200,
       totalPRs: 300,
@@ -185,10 +185,10 @@ describe("Test fetchStats", () => {
 
   it("should fetch total commits", async () => {
     mock
-      .onGet("https://api.github.com/search/commits?q=author:anuraghazra")
+      .onGet("https://api.github.com/search/commits?q=author:jvalentik")
       .reply(200, { total_count: 1000 });
 
-    let stats = await fetchStats("anuraghazra", true, true);
+    let stats = await fetchStats("jvalentik", true, true);
     const rank = calculateRank({
       totalCommits: 1050,
       totalRepos: 5,
@@ -201,7 +201,7 @@ describe("Test fetchStats", () => {
 
     expect(stats).toStrictEqual({
       contributedTo: 61,
-      name: "Anurag Hazra",
+      name: "Johny",
       totalCommits: 1050,
       totalIssues: 200,
       totalPRs: 300,
@@ -212,10 +212,10 @@ describe("Test fetchStats", () => {
 
   it("should exclude stars of the `test-repo-1` repository", async () => {
     mock
-      .onGet("https://api.github.com/search/commits?q=author:anuraghazra")
+      .onGet("https://api.github.com/search/commits?q=author:jvalentik")
       .reply(200, { total_count: 1000 });
 
-    let stats = await fetchStats("anuraghazra", true, true, ["test-repo-1"]);
+    let stats = await fetchStats("jvalentik", true, true, ["test-repo-1"]);
     const rank = calculateRank({
       totalCommits: 1050,
       totalRepos: 5,
@@ -228,7 +228,7 @@ describe("Test fetchStats", () => {
 
     expect(stats).toStrictEqual({
       contributedTo: 61,
-      name: "Anurag Hazra",
+      name: "Johny",
       totalCommits: 1050,
       totalIssues: 200,
       totalPRs: 300,
@@ -240,7 +240,7 @@ describe("Test fetchStats", () => {
   it("should fetch two pages of stars if 'FETCH_MULTI_PAGE_STARS' env variable is set to `true`", async () => {
     process.env.FETCH_MULTI_PAGE_STARS = true;
 
-    let stats = await fetchStats("anuraghazra");
+    let stats = await fetchStats("jvalentik");
     const rank = calculateRank({
       totalCommits: 100,
       totalRepos: 5,
@@ -253,7 +253,7 @@ describe("Test fetchStats", () => {
 
     expect(stats).toStrictEqual({
       contributedTo: 61,
-      name: "Anurag Hazra",
+      name: "Johny",
       totalCommits: 100,
       totalIssues: 200,
       totalPRs: 300,
@@ -265,7 +265,7 @@ describe("Test fetchStats", () => {
   it("should fetch one page of stars if 'FETCH_MULTI_PAGE_STARS' env variable is set to `false`", async () => {
     process.env.FETCH_MULTI_PAGE_STARS = "false";
 
-    let stats = await fetchStats("anuraghazra");
+    let stats = await fetchStats("jvalentik");
     const rank = calculateRank({
       totalCommits: 100,
       totalRepos: 5,
@@ -278,7 +278,7 @@ describe("Test fetchStats", () => {
 
     expect(stats).toStrictEqual({
       contributedTo: 61,
-      name: "Anurag Hazra",
+      name: "Johny",
       totalCommits: 100,
       totalIssues: 200,
       totalPRs: 300,
@@ -290,7 +290,7 @@ describe("Test fetchStats", () => {
   it("should fetch one page of stars if 'FETCH_MULTI_PAGE_STARS' env variable is not set", async () => {
     process.env.FETCH_MULTI_PAGE_STARS = undefined;
 
-    let stats = await fetchStats("anuraghazra");
+    let stats = await fetchStats("jvalentik");
     const rank = calculateRank({
       totalCommits: 100,
       totalRepos: 5,
@@ -303,7 +303,7 @@ describe("Test fetchStats", () => {
 
     expect(stats).toStrictEqual({
       contributedTo: 61,
-      name: "Anurag Hazra",
+      name: "Johny",
       totalCommits: 100,
       totalIssues: 200,
       totalPRs: 300,
